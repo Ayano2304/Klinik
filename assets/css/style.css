@@ -1,0 +1,263 @@
+/* Important stuff here! Look at the bottom!!! (Line 133 to 136) */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --nav-bg: #03000e;
+  --nav-shadow: 0px 3px var(--main-clr);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  background: #ffffff;
+  z-index: 99;
+  transition: background-color 0.3s ease;
+}
+
+#my-navbar.shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan shadow */
+}
+
+nav .logo {
+  color: #019944;
+  font-size: 22px;
+
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav ul {
+  --padding: 20px;
+  --font-size: 17px;
+
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size);
+  overflow-y: hidden;
+  transition: 1s cubic-bezier(.68,-0.55,.27,10.55);
+}
+
+nav ul li {
+  padding: var(--padding);
+}
+
+nav ul li a {
+  color: #019944;
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0%;
+  height: 1.7px;
+  border-radius: 99px;
+  /* background: var(--main-clr); */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.1s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav .menu {
+  width: 22px;
+  height: 16px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin: 20px;
+}
+
+nav .menu span {
+  width: 100%;
+  height: 2px;
+  border-radius: 99px;
+  background: #019944;
+  transition: 0.3s ease;
+  transform-origin: left;
+}
+
+@media (max-width: 910px) {
+  nav .menu {
+    display: flex;
+  }
+
+  nav ul {
+    --height: 0px;
+
+    flex-direction: column;
+    background: #00C88C;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 56px;
+    height: var(--height);
+    transition: 1s cubic-bezier(.68,-0.55,.27,1.55);
+  }
+  nav ul.active {
+    --height: calc(
+      (((var(--padding) * 2) + (var(--font-size) * 1.5))) * var(--childenNumber)
+    );
+    /*   (Block Level Padding + The Font Size) * The Number of Children   */
+    
+    
+    transition: 1s ease;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li a {
+    width: 100%;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+
+/* Jumbotron */
+section.Home{
+  padding-top: 5rem;
+    height: 100vh;
+    background-image: url("https://plus.unsplash.com/premium_photo-1661758882823-cb08c978a27b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Akhir Jumbotron */
+
+
+section.about{
+  /* height: 100vh; */
+  padding-top: 8rem;
+}
+
+/* Layanan */
+
+section.layanan{
+  /* height: 100vh; */
+  padding-top: 8rem;
+}
+
+.container-box{
+width: 15em;
+height: 25em;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding-top: 1rem;
+padding-bottom: 5rem;
+padding-inline: 1em;
+transition: transform 0.3s ease-in-out;
+cursor: pointer;
+}
+
+.container-box:hover{
+transform: scale(1.1);
+}
+
+img.image-cover{
+  height: 10rem;
+  width: 100%;
+}
+
+h2.layanan-title{
+  color: #274581;
+  font-size: 1.4rem;
+  padding-top: 1.5em;
+}
+
+p.layanan-desc{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+/* END Layanan */
+
+
+
+/* Kontak */
+section.kontak{
+  /* height: 100vh; */
+  padding-top: 8rem;
+}
+
+.background{
+  background-color: #F2F2F3;
+  padding-block: 2rem;
+  /* height: 25rem; */
+  height: 100%;
+}
+
+section.kontak .maps{
+  height: 25rem;
+}
+
+iframe.loct{
+  width: 100%;
+  height: 100%;
+  padding-block: 1rem;
+  border-radius: 50px;
+}
+
+iframe.loct:hover{
+  color: black;
+}
+
+.icon-container{
+  width: 17rem;
+}
+
+/* END Kontak */
+
+/* Footer */
+footer p{
+  font-size: 1em;
+}
+/* END Footer */
+
+/* Staff */
+section.staff .place-hold{
+width: 15em;
+padding-top: 1rem;
+height: 18rem;
+/* background-color: cadetblue; */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+section.staff .pas-foto{
+  height: 10rem;
+  width: 10rem;
+}
+
+.pass{
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  border-radius: 100%;
+}
+/* END STAFF */

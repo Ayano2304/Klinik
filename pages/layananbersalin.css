@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section.hero{
+    /* margin-top: 1em; */
+    height: 18rem;
+}
+
+.hero{
+    background-color: #E6F0E8;
+    /* height: 18rem; */
+}
+
+.hero h3{
+    /* text-align: center; */
+    font-weight: 800;
+    color: rgb(0, 21, 0);
+    padding-top: 3rem;
+    font-size: 2rem;
+}
+
+.layanan-detail{
+    padding: 1.5em;
+    border-bottom-left-radius: 70px;
+    border-top-right-radius: 70px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+:root{
+    --white: #fff;
+    --main-color: #2d3d97;
+}
+.demo{ background:#EEEEEE;padding-bottom: 4em; }
+.pricingTable{
+    color: var(--main-color);
+    background: var(--white);
+    font-family: 'Signika Negative', sans-serif;
+    text-align: center;
+    padding: 0 0 22px;
+    border-radius: 30px 30px;
+    overflow: hidden;
+    width: 16rem;
+    transition: .4s ease-in;
+}
+
+.pricingTable:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.pricingTable .pricingTable-header {
+    color:#fff;
+    background:var(--main-color);
+    padding: 20px 0;
+    margin: 0 0 25px;
+} 
+.pricingTable .title{
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+.pricingTable .price-value{ 
+    border-bottom: 2px solid var(--main-color);
+    width: calc(100% - 40px);
+    padding: 0 0 10px;
+    margin: 0 auto 15px; 
+}
+.pricingTable .price-value .amount{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 50px;
+    display: block;
+}
+
+.pricingTable .pricing-content{
+    text-align: left;
+    padding: 0;
+    margin: 0 0 20px;
+    list-style: none;
+    display: inline-block;
+}
+.pricingTable .pricing-content li{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: .5px;
+    padding: 0 15px 0 25px;
+    margin: 0 0 5px;
+    position: relative;
+}
+.pricingTable .pricing-content li:last-child{ margin: 0; }
+.pricingTable .pricing-content li:before{
+    color: #fff;
+    background-color:var(--main-color);
+    content: "\f00c";
+    font-family: "Font Awesome 5 free";
+    font-size: 12px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 21px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 0;
+}
+.pricingTable .pricing-content li.disable:before{
+    content: "\f00d";
+}
+.pricingTable .pricingTable-signup a{
+    color: #fff;
+    background:var(--main-color);
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 7px 20px 5px;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.pricingTable.orange { --main-color: #FF8214; }
+.pricingTable.blue { --main-color: #37C4EB; }
+@media only screen and (max-width: 990px){
+    .pricingTable{ margin: 0 0 40px; }}
+
+.image-container{
+    width: 200px;
+    height: 200px;
+}
+
+.thumbnail{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.image-box{
+    height: 18rem;
+}
+
+.image-box img{
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+  background-color: crimson;
+}
